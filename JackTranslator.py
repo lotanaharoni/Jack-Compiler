@@ -169,7 +169,7 @@ class JackTranslator:
                 else:
                     self.compileIndex(vmLines, assigned)
                     self.increaseLineNumberBy(1)
-            else:  # To be continued
+            else:
                 name = self.__xmlLines[self.__lineNumber].replace(INLINE, EMPTY).replace(NEWLINE, EMPTY).split()[1]
                 vmLines.append("push " + KINDS[self.__symbolTable.getKind(name)] + " " + str(self.__symbolTable.getCounter(name)))
                 self.increaseLineNumberBy(2)
