@@ -1,10 +1,7 @@
 class SymbolTable:
 
-    # Symbol table for class
     __classTable = {}
-    # Symbol table for method
     __methodTable = {}
-    # Counters
     __fieldCounter = 0
     __staticCounter = 0
     __argCounter = 0
