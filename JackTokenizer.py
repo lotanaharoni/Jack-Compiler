@@ -80,9 +80,6 @@ class JackTokenizer:
                                 word += c
                                 digit_flag = True
                             elif c in SYMBOLS:
-                                #if digit_flag and c == ".":
-                                #   word += c
-                                #  continue
                                 if word != "":
                                     self.files.append(word)
                                 self.files.append(c)
@@ -142,26 +139,3 @@ class JackTokenizer:
         files = []
         for name in file_names:
             self.parse_line(directory_name + "/" + name)
-        # print(files)
-        #     new_name = directory_name + "/" + \
-        #                name.replace(JACK_FILE, XML_FILE)
-        #     new_names.append(new_name)
-        # for file in file_names:
-        #     new_name = directory_name + "/" + \
-        #                file.replace(JACK_FILE, XML_FILE)
-        #     file = directory_name + "/" + file
-        #     with open(file, READ_MODE) as f:
-        #         for line in f:
-        #             for c in SPACES:
-        #                 line = line.replace(c, EMPTY)
-        #             if COMMENT in line:
-        #                 index_comment = line.find(COMMENT)
-        #                 line = line[:index_comment]
-        #             if line != EMPTY:
-        #                 line_temp = line.split()
-        #                 line_parsed.append(line_temp)
-        #         self.files.append(line_parsed)
-        #         line_parsed = []
-        #     f.close()
-        # writer = JackTokenizer()
-        # writer.write_file(self.files, new_names)
