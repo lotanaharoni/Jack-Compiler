@@ -50,30 +50,10 @@ class CompilationEngine:
         """
         new_line = ""
         function_name = ""
-        # counter = 0
-        #
-        # for file in tokens:
-        #     with open(file_names[counter], WRITE_MODE) as f2:
-        #         for line in file:
-        #             new_line = line[0]
-        #             f2.write(new_line + "\n")
-        #     f2.close()
-        #     counter = counter + 1
         xmlLines = []
         self.write_class(xmlLines, tokens)
-
-        # TO WRITE AN XML FILE, PUT IN COMMENT THE LAST 2 LINES, AND REMOVE COMMENTS FROM THE NEXT LINES
-        # THEN FOR EVERY FUNCTION CHANGE THE ARGUMENT NAME xmlLines TO output
-        # AND REPLACE .append WITH .write
-
-        #with open(file_names[0], "w") as output:
-        #   self.write_class(output, tokens)
-        #output.close()
-        #with open(file_names[0], "r") as output:
-        #   self.__xmlLines = output.readlines()
         x = JackTranslator()
         x.translate(xmlLines, file_names[0])
-        #output.close()
 
     def write_term(self, xmlLines, tokens, i, tabs):
         xmlLines.append(INLINE * (tabs) + "<term>\n")
