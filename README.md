@@ -14,7 +14,7 @@
 
 ## Language
 
-This static library is written in C++.
+This static library is written in Python.
 <br>
 
 ## Introduction
