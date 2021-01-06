@@ -76,7 +76,5 @@ I'm developing on Linux and macOS, and the library was tested on Linux.
 
 ## Internal tools
 
-
-- The library used system calls like 'sigsetjmp', 'siglongjmp' and 'sigprocmask'
-- The following headers are included in the library: 'signal.h' and 'sys/time.h'
+- The program uses 'sys' and 'os' libraries
     
