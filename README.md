@@ -1,5 +1,5 @@
 <h1> Jack- Compiler</h1>
-<p>Include the library and use it according to the package's public interface</p>
+<p>The Jack-Compiler compiles a program written in Jack and generatets a VM code.</p>
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Language
 
-This static library is written in Python.
+This program is written in Python.
 <br>
 
 ## Introduction
@@ -72,7 +72,7 @@ int uthread_resume(int tid)
 
 ## Supported OS
 
-I'm developing on linux and macOS, and the library was tested on linux.
+I'm developing on Linux and macOS, and the library was tested on Linux.
 
 ## Internal tools
 
