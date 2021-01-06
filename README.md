@@ -5,8 +5,6 @@
 
 1. [Language](#Language)
 2. [Introduction](#introduction)
-3. [Setup](#setup)
-4. [Library functions](#Library-functions)
 5. [Supported OS](#supported-os)
 6. [Internal tools](#Internal-tools)
 
@@ -19,56 +17,11 @@ This program is written in Python
 
 ## Introduction
 
-This is a static library, that creates and manages user-level threads.<br>
-The library implements Round-Robin scheduling alghorithm.<br>
-Each thread can be in one of the following states: RUNNING, BLOCKED and READY.
+The first step the program does is to lexically analyzes a Jack program into a stream of tokens.<br>
+Then, it parses it into it's formal structure. It's done by recursively creates a "derivation tree".<br>
+The program creates a symbol-table and generates VM code.
 <br>
 
-### Benefits
-
-- The user can create, block, resume and terminate threads.
-- The library supports different threads with different priorities, high priority threads will<br>
-  get more time in the CPU when their turn arrive.
-
-## Setup
-
-Include the 'uthreads.h' header
-<br>
-
-## Library functions
-
-```typescript
-int uthread_init(int *quantum_usecs, int size)
-/**
- * This function initializes the thread library.
- */
-
-int uthread_spawn(void (*f)(void), int priority)
-/**
- * This function creates a new thread, whose entry point is the function f with the signature void f(void).
- */
-
-int uthread_change_priority(int tid, int priority)
-/**
- * This function initializes the thread library.
- */
-
-int uthread_terminate(int tid)
-/**
- * This function changes the priority of the thread with ID tid.
- */
-
-int uthread_block(int tid)
-/**
- *  This function blocks the thread with ID tid.
- */
-
-int uthread_resume(int tid)
-/**
- * This function resumes a blocked thread with ID tid.
- */
-
-```
 
 ## Supported OS
 
