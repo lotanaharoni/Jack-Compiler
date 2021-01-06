@@ -1,5 +1,5 @@
 <h1> Jack- Compiler</h1>
-<p>The Jack-Compiler compiles a program written in Jack and generatets a VM code.</p>
+<p>The Jack-Compiler compiles a program written in Jack and generatets VM code.</p>
 
 ## Table of Contents
 
